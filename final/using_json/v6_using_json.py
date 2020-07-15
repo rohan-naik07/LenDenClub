@@ -2,7 +2,6 @@ import json
 import os
 import numpy as np
 import pandas as pd
-import requests
 import ast
 
 with open('query_result_2020-07-10T11_59_14.080809Z.json') as f:
@@ -32,22 +31,7 @@ for index in range(len(data)):
     #s = json.loads(s)
     #print(type(s))
 
-
-print(len(users))
-print(len(details_list))
-print(len(data))
-
-"""s = details_list[2]
-
-print(details_list[2]['data'][0]['bankName'])
-print(s['data'][0]['accountNumber'])
-print(s['data'][0]['accountName'])
-print(s['data'][0]['salary'][-1]['totalSalary'])"""
-
 users=np.array(users)
-
-#print(f"First user : {users[0]} , Second : {users[1]} , Third : {users[2]} ")
-
 
 bank_names = []
 account_nos =[]
