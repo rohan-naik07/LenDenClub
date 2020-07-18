@@ -43,7 +43,7 @@ narration_dict  = {
                     "razorpay" : "ACH D- CTRAZORPAY-CTTATAAIAAEMNEMW1Z7RDQ"
 }
 
-check_narration = ['LAZYPAY', 'BAJAJ','ZEST','EARLYSALARY','cashe','KISSHT','kreditbee','RAZORPAY']
+check_narration = ['lazypay', 'bajaj','zest','earlysalary','cashe','kissht','kreditbee','razorpay']
 
 bank_names = []
 account_nos =[]
@@ -65,8 +65,8 @@ for data_index in range(len(data)):
             for salary_index in range(len(details_list[data_index]['data'][0]['salary'])):
                 for transaction_index in range(len(details_list[data_index]['data'][0]['salary'][salary_index]['transactions'])):
                     for item in check_narration:
-                        if item in details_list[data_index]['data'][0]['salary'][salary_index]['transactions'][transaction_index]['narration']:
-                            entity.append(item.lower())
+                        if item in details_list[data_index]['data'][0]['salary'][salary_index]['transactions'][transaction_index]['narration'].lower():
+                            entity.append(item)
                             dates.append(get_date(details_list[data_index]['data'][0]['salary'][salary_index]['transactions'][transaction_index]['transactionDate']))
                             salary.append(details_list[data_index]['data'][0]['salary'][salary_index]['transactions'][transaction_index]['amount'])
                             closing_balance.append(details_list[data_index]['data'][0]['salary'][salary_index]['transactions'][transaction_index]['closingBalance']) # closing_balance
