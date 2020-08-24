@@ -1,0 +1,7 @@
+Tasks & Project Report
+
+-> Structuring data from raw Json form to Csv form using Python libraries.
+-> Extracting vendor from Bank Payments using Numpy,Pandas
+-> Explored AWS services like Lamdba,S3,Kinesis,RedShift.
+-> Deployed the code on AWS using s3 and Redshift.
+-> Created a Date-Range Parser from Bank Statements of 11 different banks using tabula-py and PyPDF2.
